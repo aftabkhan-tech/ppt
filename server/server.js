@@ -1,7 +1,9 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 import mongoose from "mongoose";
 import cors from "cors";
-import dotenv from "dotenv";
+
 import connectdb from "./config/db.js";
 import router from "./routes/user.routes.js";
 import cookieParser from "cookie-parser";
@@ -9,7 +11,7 @@ import userRouter from "./routes/userRoute.js";
 import presentationRouter from "./routes/presentation.routes.js";
 import multer from "multer";
 
-dotenv.config();
+
 
 const app = express();
 app.use(express.json());
